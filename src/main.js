@@ -28,7 +28,7 @@ ScrollTrigger.create({
   trigger: ".user-active",
   start: "top 95%",
   end: "bottom top",
-  onRefresh: () => {
+  onEnter: () => {
     const counter = { val: 0 };
     counterTween = gsap.to(counter, {
       val: 300,
@@ -46,7 +46,7 @@ ScrollTrigger.create({
   trigger: ".trusted-by-company",
   start: "top 95%",
   end: "bottom top",
-  onRefresh: () => {
+  onEnter: () => {
     const counter = { val: 0 };
     counterTween = gsap.to(counter, {
       val: 230,
@@ -64,7 +64,7 @@ ScrollTrigger.create({
   trigger: ".transaction",
   start: "top 95%",
   end: "bottom top",
-  onRefresh: () => {
+  onEnter: () => {
     const counter = { val: 0 };
     counterTween = gsap.to(counter, {
       val: 230,
