@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@theme {
+  --color-icon: #00f6ff;
+  --color-landing-page: #00040f;
+  --color-c1: #ffffff99;
+  --color-c2: #fc67fa;
+  --color-c3: #26d0ce;
+  --color-c4: #33bbcf;
+  --color-content-element: #11101d;
+  --default-font-family: "Poppins", sans-serif;
+}
+.active-li {
+  color: white;
+}
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 50%;
+    min-width: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+#modal.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
