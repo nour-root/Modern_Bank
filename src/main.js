@@ -86,55 +86,87 @@ gsap.fromTo(
     rotationZ: "0",
   }
 );
-gsap.set([".bubble-1", ".bubble-2", ".bubble-3"], {
-  opacity: 0,
-  scale: 0,
-});
 tl1
-  .to(".bubble-1", {
+  .fromTo(
+    ".bubble-1",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      ease: "bounce.out",
+    }
+  )
+  .fromTo(
+    ".bubble-2",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      ease: "bounce.out",
+    }
+  )
+  .fromTo(
+    ".bubble-3",
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      ease: "bounce.out",
+    }
+  );
+gsap.fromTo(
+  ".light-b",
+  {
+    opacity: 0,
+  },
+  {
     opacity: 1,
-    scale: 1,
-    duration: 0.6,
-    ease: "bounce.out",
-  })
-  .to(".bubble-2", {
-    opacity: 1,
-    scale: 1,
-    duration: 0.6,
-    ease: "bounce.out",
-  })
-  .to(".bubble-3", {
-    opacity: 1,
-    scale: 1,
-    duration: 0.6,
-    ease: "bounce.out",
-  });
-gsap.set(".light-b", {
-  opacity: 0,
-});
-gsap.to(".light-b", {
-  opacity: 1,
-  duration: 1,
-  delay: 0.5,
-});
-gsap.set([".card-1", ".card-2", ".card-3"], {
-  opacity: 0,
-});
-tl.to(".card-1", {
-  opacity: 1,
-  duration: 0.5,
-  ease: "power1.in",
-})
-  .to(".card-2", {
+    duration: 1,
+    delay: 0.5,
+  }
+);
+
+tl.fromTo(
+  ".card-1",
+  { opacity: 0 },
+  {
     opacity: 1,
     duration: 0.5,
     ease: "power1.in",
-  })
-  .to(".card-3", {
-    opacity: 1,
-    duration: 0.5,
-    ease: "power1.in",
-  });
+  }
+)
+  .fromTo(
+    ".card-2",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power1.in",
+    }
+  )
+  .fromTo(
+    ".card-3",
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power1.in",
+    }
+  );
 const swiper = new Swiper(".swiper", {
   loop: true,
   speed: 5500,
